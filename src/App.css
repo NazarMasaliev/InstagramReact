@@ -290,3 +290,6 @@ li a {
   overflow-y: auto;
   max-height: 100vh;
 }
+body{
+  min-width: 1800px;
+}
