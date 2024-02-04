@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import MessLeft from "./messegpageicon"
 import { Users, messages } from "./elemet";
+import { useNavigate } from "react-router-dom";
 
 
 function Message() {
+  const history = useNavigate();
   const [login, setLogin] = useState(null)
   function showLoginInPage() {
     const login = Users.filter((i) => i.id == localStorage.getItem('token'))
@@ -49,6 +51,13 @@ function Message() {
 
   //
 
+
+  function profpost(id){
+    history('/profildifferent/'+id)
+
+  }
+
+  //
 
   useEffect(() => {
     Show();
@@ -97,7 +106,7 @@ function Message() {
                             <div className="col-2">
                               <img className="rounded-circle" src={i.img} alt="" style={{ width: "60px", height:"60px" }} />
                             </div>
-                            <div className="col-9 mt-2" style={{ lineHeight: "1.3" }}>
+                            <div className="col-9 mt-2" style={{ lineHeight: "1.3", paddingLeft:"20px"}}>
                               <div className="row">
                                 <div className="col-12">
                                   <span>{i.profilname}</span>
@@ -133,7 +142,7 @@ function Message() {
                           <button style={{ border: "none", background: "white" }}>
                             <img style={{ width: "50px" }} src="https://avatars.mds.yandex.net/i?id=d0525adcc4e0165ea8a89c446d00ff523bbe7ff7-12525650-images-thumbs&n=13" className="rounded-circle" alt="" />
                           </button>
-                          <button style={{ marginTop: "10px", background: "white", border: "none" }}><b>{i.profilname}</b></button>
+                          <button style={{ marginTop: "10px", background: "white", border: "none" }}><b onClick={() => {profpost(i.chat_id)}}>{i.profilname}</b></button>
 
                         </div>
                         <div className="col-6 pt-1" style={{ textAlign: "right" }}>

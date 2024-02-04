@@ -87,14 +87,14 @@ function Second() {
                       <>
                         {products.map((i) =>
                           <div className="row mt-3">
-                            <div className="col-12 p-0">
+                            <div className="col-12 p-0" >
                               <div className="row">
                                 <div className="col-2">
                                   <div className="circleProfilImg rounded-circle" style={{ height: "40px", width: "40px", borderStyle: "solid", borderColor: "orangered", cursor:"pointer" }} onClick={() => {profpost(i.user_id)}}></div>
                                 </div>
                                 <div className="col-8 p-0">
                                   <div className="row">
-                                    <div className="col-12 p-0" style={{ lineHeight: "1.2" }}><span style={{ fontWeight: "500" }}>{i.postaccount}</span><span style={{ marginLeft: "10px" }}>26мин</span><br /><small style={{ fontWeight: "400" }}>Оригиниальное аудио</small></div>
+                                    <div className="col-12 p-0" style={{ lineHeight: "1.2" }}><span style={{ fontWeight: "500", cursor:"pointer" }} onClick={() => {profpost(i.user_id)}}>{i.postaccount}</span><span style={{ marginLeft: "10px" }}>26мин</span><br /><small style={{ fontWeight: "400" }}>Оригиниальное аудио</small></div>
                                   </div>
                                 </div>
                                 <div className="col-2" style={{ textAlign: 'right' }}>
@@ -146,14 +146,14 @@ function Second() {
                       <div className="row">
                         <div className="col-2">
                           <div className="circleProfilImg rounded-circle" style={{ height: "40px", width: "40px", borderStyle: "solid", borderColor: "orangered" }}>
-                            <img className='rounded-circle' src={userDetail.img} style={{width:"40px", paddingRight:"5px"}} alt="" />
+                            <img className='rounded-circle' onClick={() => history('/fprofil')} src={userDetail.img} style={{width:"40px", paddingRight:"5px",cursor:"pointer"}} alt="" />
                           </div>
                         </div>
                         <div className="col-4 p-0" style={{ lineHeight: "1.2" }}>
                           <span className="" style={{ fontWeight: "500" }}>
-                            <small>{userDetail.login}</small></span>
+                            <small style={{cursor:"pointer"}} onClick={() => history('/fprofil')}>{userDetail.login}</small></span>
                           <br />
-                          <span className="text-secondary">
+                          <span className="text-secondary" style={{cursor:"pointer"}} onClick={() => history('/fprofil')}>
                             {userDetail.profilname}
                           </span>
 

@@ -66,12 +66,12 @@ export const Lnav = () => {
                 <>
                   {findprofil.map((i) =>
                     <div className="col-12 mt-4">
-                      <div className="FindHover" style={{ float: "left", height: "60px", width: "100%", paddingTop: "15px" }}>
+                      <div className="FindHover pt-2" style={{ float: "left", height: "60px", width: "100%", paddingLeft:"10px"}}>
                         <div className="row">
                           <div className="col-2">
-                            <img className='rounded-circle' style={{width:"50px"}} src={i.img} alt="" />
+                            <img className='rounded-circle' style={{width:"50px", height:"50px",}} src={i.img} alt="" />
                           </div>
-                          <div className="col-8" style={{ lineHeight: "1" }}>
+                          <div className="col-8" style={{ lineHeight: "1", paddingTop:"5px" }}>
                             <div className="row">
 
                               <div className="col-12" style={{ fontWeight: "500" }}>
@@ -82,7 +82,7 @@ export const Lnav = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-2">
+                          <div className="col-2" style={{paddingTop:"12px"}}>
                             <i class="fa-solid fa-xmark fa-lg" style={{ cursor: "pointer" }}></i>
                           </div>
                         </div>
@@ -93,7 +93,7 @@ export const Lnav = () => {
                   }
                 </> :
                 <>
-
+                  <div className="col-12">Нет результата</div>
                 </>
 
               }

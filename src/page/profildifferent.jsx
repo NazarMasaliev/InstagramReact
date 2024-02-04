@@ -78,7 +78,7 @@ function DifferentProfil() {
                   <div className="col-8">
                     <div className="row">
                       <div className="col-12 pt-3" style={{ paddingLeft: "50px" }}>
-                        <span style={{ fontSize: "20px" }}></span> <button className="Rprofil" style={{ marginLeft: "20px" }}>Редактировать профиль</button><button className="Rprofil" style={{ marginLeft: "20px" }}>Посмотреть архив</button><button className="bg-white border-0" style={{ marginLeft: "20px" }}><i class="fa-solid fa-gear fa-xl"></i></button>
+                        <span style={{ fontSize: "20px" }}>{ProfilElement.nickname}</span> <button className="Rprofil" style={{ marginLeft: "20px" }}>Подписки</button><button className="Rprofil" style={{ marginLeft: "20px" }}>Отправить сообщение</button><button className="bg-white border-0" style={{ marginLeft: "20px" }}><i class="fa-solid fa-gear fa-xl"></i></button>
                       </div>
                       <div className="col-12 mt-3">
                         <button className="bg-white border-0" style={{ marginLeft: "30px" }}> <span style={{ fontWeight: "500" }}>{ProfilElement.profilpublication}</span> публикаций</button> <button className="bg-white border-0"> <span style={{ fontWeight: "500", marginRight: "5px" }}>{ProfilElement.profilfollowers}</span>подписчиков</button>  <button className="bg-white border-0"> <span style={{ fontWeight: "500", marginRight: "5px" }}>{ProfilElement.profilfollower}</span>подписок</button>
