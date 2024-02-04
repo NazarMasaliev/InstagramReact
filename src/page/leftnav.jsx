@@ -37,7 +37,7 @@ export const Lnav = () => {
 
   return (
 
-    <div className="leftMenu" style={{ paddingLeft: "10px", float: "left", width: "250px", borderRight: "solid 1px", borderRightColor: "grey", height:"100vh"}}>
+    <div className="leftMenu" style={{ paddingLeft: "10px", float: "left", width: "250px", borderRight: "solid 1px", borderRightColor: "grey",}}>
       <Modalprofil isOpen={modalInfoOpen} isClose={Closemodal}></Modalprofil>
       <Modalexit isOpen={modal} isClose={close}></Modalexit>
       <div className="MainFindBlock border bg-white p-3 rounded">
