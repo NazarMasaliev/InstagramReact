@@ -6,6 +6,42 @@ export const ActualyInProfil = [
     name: "Madara",
   },
   {
+    id: 1,
+    img: "https://steamuserimages-a.akamaihd.net/ugc/957480811955081596/E7E9FC9147013120A6D23317A249F533CB92DDF4/?imw=512&amp;imh=529&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    actualy_id: 1,
+    name: "Madara",
+  },
+  {
+    id: 1,
+    img: "https://steamuserimages-a.akamaihd.net/ugc/957480811955081596/E7E9FC9147013120A6D23317A249F533CB92DDF4/?imw=512&amp;imh=529&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    actualy_id: 1,
+    name: "Madara",
+  },
+  {
+    id: 1,
+    img: "https://steamuserimages-a.akamaihd.net/ugc/957480811955081596/E7E9FC9147013120A6D23317A249F533CB92DDF4/?imw=512&amp;imh=529&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    actualy_id: 1,
+    name: "Madara",
+  },
+  {
+    id: 1,
+    img: "https://steamuserimages-a.akamaihd.net/ugc/957480811955081596/E7E9FC9147013120A6D23317A249F533CB92DDF4/?imw=512&amp;imh=529&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    actualy_id: 1,
+    name: "Madara",
+  },
+  {
+    id: 1,
+    img: "https://steamuserimages-a.akamaihd.net/ugc/957480811955081596/E7E9FC9147013120A6D23317A249F533CB92DDF4/?imw=512&amp;imh=529&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    actualy_id: 1,
+    name: "Madara",
+  },
+  {
+    id: 1,
+    img: "https://steamuserimages-a.akamaihd.net/ugc/957480811955081596/E7E9FC9147013120A6D23317A249F533CB92DDF4/?imw=512&amp;imh=529&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+    actualy_id: 1,
+    name: "Madara",
+  },
+  {
     id: 2,
     img: "https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666420654_25-mykaleidoscope-ru-p-beionse-khello-instagram-25.jpg",
     actualy_id: 1,

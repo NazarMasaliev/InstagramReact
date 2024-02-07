@@ -18,7 +18,7 @@ function App() {
         <Route path='/' element={<First />} />
         <Route path='/instprofilpage' element={<Second />} />
         <Route path='/fprofil' element={<Profile />} />
-        <Route path='/Message' element={<Message />} />
+        <Route path='/Message' element={<Message/>} />
         <Route path='/profildifferent/:id' element={<DifferentProfil />} />
       </Routes>
 

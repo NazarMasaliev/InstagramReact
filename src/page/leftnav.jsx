@@ -7,7 +7,7 @@ import $ from 'jquery';
 export const Lnav = () => {
   const [findprofil, setfindprofil] = useState([]);
   function FindProfilInModal(nick) {
-    const findprof = Users.filter((i) => nick == i.nickname || nick == i.profilname)
+    const findprof = Users.filter((i) => nick === i.nickname || nick === i.profilname)
     if (findprof.length > 0) {
       setfindprofil(findprof)
     }
@@ -21,17 +21,33 @@ export const Lnav = () => {
   function close() {
     setModal(false)
   }
+
+  //
+
+
   const history = useNavigate();
   function Home() {
     history('/instprofilpage')
   }
 
+  //
+
   function goinprofil() {
     history('/fprofil')
   }
+
+  //
+
+
   const [modalInfoOpen, setmodalInfoOpen] = useState(false);
   function Closemodal() {
     setmodalInfoOpen(false)
+  }
+
+  //
+
+  function profil(id){
+    window.location.href='/profildifferent/'+id;
   }
 
 
@@ -71,7 +87,7 @@ export const Lnav = () => {
                           <div className="col-2">
                             <img className='rounded-circle' style={{width:"50px", height:"50px",}} src={i.img} alt="" />
                           </div>
-                          <div className="col-8" style={{ lineHeight: "1", paddingTop:"5px" }}>
+                          <div className="col-8" style={{ lineHeight: "1", paddingTop:"5px" }} onClick={() => {profil(i.id)}}>
                             <div className="row">
 
                               <div className="col-12" style={{ fontWeight: "500" }}>

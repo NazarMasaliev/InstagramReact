@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import MessLeft from "./messegpageicon"
 import { Users, messages } from "./elemet";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 function Message() {
+
+  //
+
   const history = useNavigate();
   const [login, setLogin] = useState(null)
   function showLoginInPage() {
@@ -17,7 +20,7 @@ function Message() {
     }
   }
 
-//
+  //
 
   const [messageElement, setmessageElement] = useState([]);
   const Show = () => {
@@ -31,14 +34,14 @@ function Message() {
   }
 
 
-//
+  //
 
 
 
 
   const [chat, setChat] = useState([]);
   const token = localStorage.getItem('token');
- 
+
   const ShowChat = (id) => {
     const usermessage = messages.filter((i) => i.chat_id == id);
     if (usermessage.length > 0) {
@@ -52,16 +55,25 @@ function Message() {
   //
 
 
-  function profpost(id){
-    history('/profildifferent/'+id)
+  function profpost(id) {
+    window.location.href='/profildifferent/'+id
 
   }
 
   //
 
+  
+
+
+  //
+
+
   useEffect(() => {
     Show();
     showLoginInPage();
+
+    
+
   }, [])
 
 
@@ -69,7 +81,6 @@ function Message() {
   return (
     <div className="container-fluid p-0" style={{ position: "fixed" }}>
       <MessLeft></MessLeft>
-
       <div className="row">
         <div className="col-12 p-0">
           <div className="messageDiv" style={{ width: "28%", float: "left", paddingLeft: "27px" }}>
@@ -104,9 +115,9 @@ function Message() {
                         <div className="col-12 mt-3 darkBg" style={{ cursor: "pointer" }} onClick={() => ShowChat(i.id)}>
                           <div className="row">
                             <div className="col-2">
-                              <img className="rounded-circle" src={i.img} alt="" style={{ width: "60px", height:"60px" }} />
+                              <img className="rounded-circle" src={i.img} alt="" style={{ width: "60px", height: "60px" }} />
                             </div>
-                            <div className="col-9 mt-2" style={{ lineHeight: "1.3", paddingLeft:"20px"}}>
+                            <div className="col-9 mt-2" style={{ lineHeight: "1.3", paddingLeft: "20px" }}>
                               <div className="row">
                                 <div className="col-12">
                                   <span>{i.profilname}</span>
@@ -132,17 +143,22 @@ function Message() {
             </div>
           </div>
           <div className="MessageShowDiv border" style={{ width: "72%", float: "left", height: "725.5px" }}>
+
             {chat.length > 0 ?
               <>
                 {chat.map((i) =>
+
+
+
+
                   <div className="row" style={{ padding: "10px" }}>
                     <div className="col-12 pt-2 pb-3 border-bottom">
                       <div className="row">
-                        <div className="col-6" >
+                        <div className="col-6" onClick={() => { profpost(i.chat_id) }} >
                           <button style={{ border: "none", background: "white" }}>
-                            <img style={{ width: "50px" }} src="https://avatars.mds.yandex.net/i?id=d0525adcc4e0165ea8a89c446d00ff523bbe7ff7-12525650-images-thumbs&n=13" className="rounded-circle" alt="" />
+                            <img style={{ width: "50px", height: "50px" }} src={i.img} className="rounded-circle" alt="" />
                           </button>
-                          <button style={{ marginTop: "10px", background: "white", border: "none" }}><b onClick={() => {profpost(i.chat_id)}}>{i.profilname}</b></button>
+                          <button style={{ marginTop: "10px", background: "white", border: "none" }}><b>{i.profilname}</b></button>
 
                         </div>
                         <div className="col-6 pt-1" style={{ textAlign: "right" }}>
@@ -157,7 +173,7 @@ function Message() {
                         <div className="col-12" style={{ textAlign: "center" }}>
                           <div className="row">
                             <div className="col-12 mt-4">
-                              <img className="rounded-circle" style={{ width: "100px" }} src="https://avatars.mds.yandex.net/i?id=d0525adcc4e0165ea8a89c446d00ff523bbe7ff7-12525650-images-thumbs&n=13" alt="" />
+                              <img className="rounded-circle" style={{ width: "100px", height: "100px" }} src={i.img} alt="" />
                             </div>
                             <div className="col-12 mt-4">
                               <i class="fa-solid fa-phone fa-xl"></i>
@@ -168,7 +184,7 @@ function Message() {
                               </span>
                             </div>
                             <div className="col-12">
-                              <button className="rounded border-0 mt-4"> Смотреть профиль</button>
+                              <button className="rounded border-0 mt-4" onClick={() => { profpost(i.chat_id) }}> Смотреть профиль</button>
                             </div>
                           </div>
                         </div>
@@ -176,7 +192,7 @@ function Message() {
                         <>
                           {i.user_id != token ?
                             <div className="col-12 mt-5" style={{ textAlign: "left" }}>
-                              <img className="rounded-circle" style={{ width: "30px", marginLeft: "10px" }} src="https://avatars.mds.yandex.net/i?id=d0525adcc4e0165ea8a89c446d00ff523bbe7ff7-12525650-images-thumbs&n=13" alt="" />
+                              <img className="rounded-circle" style={{ width: "30px", marginLeft: "10px", height: "30px" }} src={i.img} alt="" />
                               <span className="rounded-pill" style={{ marginLeft: "5px", paddingLeft: "10px", paddingRight: "10px", paddingTop: "5px", paddingBottom: "5px", background: "#EFEFEF" }}>
                                 {i.message}
                               </span>
@@ -185,6 +201,7 @@ function Message() {
                             <div className="col-12 mt-4" style={{ textAlign: "right" }}>
                               <span className="rounded-pill text-white" style={{ paddingLeft: "10px", paddingRight: "10px", paddingTop: "5px", paddingBottom: "5px", background: "#3797F0" }}>
                                 {i.message}
+
                               </span>
                             </div>
                           }
@@ -216,12 +233,15 @@ function Message() {
                 )}
               </>
               :
-              <></>}
+              <></>
+            }
+
+
           </div>
         </div>
       </div>
 
-    </div>
+    </div >
 
   )
 }

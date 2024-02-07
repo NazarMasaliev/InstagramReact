@@ -78,11 +78,11 @@ function Profile() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 mt-4 border" style={{width:"100%", height:"150px", maxHeight:"150px", maxWidth:"100%", overflowX:"Scroll", overflowY:"hidden"}}>
+              <div className="col-12 mt-4 border d-flex justify-content-center" style={{width:"100%", height:"150px", maxHeight:"150px", maxWidth:"100%", overflowX:"scroll",}}>
                 {actualyImg.length > 0 ?
                   <>
                     {actualyImg.map((i) =>
-                      <div className="maincurrnet border" style={{float:"left", textAlign: "center", fontWeight: "500" }}>
+                      <div className="maincurrnet border" style={{textAlign: "center", fontWeight: "500" }}>
                         <div className="currnet rounded-circle" style={{ borderStyle: "solid" }}>
                           <img src={i.img} alt="" style={{ borderRadius: "50%", width: "75px", height: "75px" }} />
                         </div>

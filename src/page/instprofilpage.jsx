@@ -90,7 +90,7 @@ function Second() {
                             <div className="col-12 p-0" >
                               <div className="row">
                                 <div className="col-2">
-                                  <div className="circleProfilImg rounded-circle" style={{ height: "40px", width: "40px", borderStyle: "solid", borderColor: "orangered", cursor:"pointer" }} onClick={() => {profpost(i.user_id)}}></div>
+                                  <div className="circleProfilImg rounded-circle border" style={{ height: "40px", width: "40px", cursor:"pointer" }} onClick={() => {profpost(i.user_id)}}><img className="rounded-circle pr-3" src={i.profilimg} style={{width:"inherit", height:"inherit"}}/></div>
                                 </div>
                                 <div className="col-8 p-0">
                                   <div className="row">

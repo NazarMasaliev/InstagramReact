@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { Lnav } from "./leftnav"
 import { useEffect, useState } from "react";
 import { Users } from "./elemet";
@@ -10,6 +10,7 @@ function DifferentProfil() {
   const id = params.id;
 
   //
+
 
   const [ProfilElement, setProfilElement] = useState(null);
   const showProfilElement = () => {
@@ -73,12 +74,12 @@ function DifferentProfil() {
               <div className="col-12 mt-4">
                 <div className="row">
                   <div className="col-4 text-right pt-4" style={{ textAlign: "right" }}>
-                    <img src={ProfilElement.img} alt="" width={150} style={{ borderRadius: "50%", marginRight: "30px", maxWidth:"150px", maxHeight:"150px" }} />
+                    <img src={ProfilElement.img} alt="" style={{ borderRadius: "50%", marginRight: "30px", maxWidth:"150px", maxHeight:"150px" }} />
                   </div>
                   <div className="col-8">
                     <div className="row">
                       <div className="col-12 pt-3" style={{ paddingLeft: "50px" }}>
-                        <span style={{ fontSize: "20px" }}>{ProfilElement.nickname}</span> <button className="Rprofil" style={{ marginLeft: "20px" }}>Подписки</button><button className="Rprofil" style={{ marginLeft: "20px" }}>Отправить сообщение</button><button className="bg-white border-0" style={{ marginLeft: "20px" }}><i class="fa-solid fa-gear fa-xl"></i></button>
+                        <span style={{ fontSize: "20px" }}>{ProfilElement.nickname}</span> <button className="Rprofil" style={{ marginLeft: "20px" }}>Подписки</button><button  className="Rprofil" style={{ marginLeft: "20px" }}>Отправить сообщение</button><button className="bg-white border-0" style={{ marginLeft: "20px" }}><i class="fa-solid fa-gear fa-xl"></i></button>
                       </div>
                       <div className="col-12 mt-3">
                         <button className="bg-white border-0" style={{ marginLeft: "30px" }}> <span style={{ fontWeight: "500" }}>{ProfilElement.profilpublication}</span> публикаций</button> <button className="bg-white border-0"> <span style={{ fontWeight: "500", marginRight: "5px" }}>{ProfilElement.profilfollowers}</span>подписчиков</button>  <button className="bg-white border-0"> <span style={{ fontWeight: "500", marginRight: "5px" }}>{ProfilElement.profilfollower}</span>подписок</button>
